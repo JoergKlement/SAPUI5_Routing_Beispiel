@@ -1,0 +1,27 @@
+<mvc:View 
+	controllerName="sapui5.demo.routing.controller.customer" 
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:layout="sap.ui.layout">
+	<Page 
+		id="page" 
+		navButtonPress="onNavPress" 
+		showNavButton="true" 
+		title="{i18n>CustomerViewTitle}">
+		<content>
+			<layout:VerticalLayout>
+				<Text text="CustomerID: {CustomerID}"></Text>
+				<Text text="CompanyName: {CompanyName}"></Text>
+				<Text text="ContactName: {ContactName}"></Text>
+				<Text text="ContactTitle: {ContactTitle}"></Text>
+				<Text text="Address: {Address}"></Text>
+				<Text text="City: {City}"></Text>
+				<Text text="Region: {Region}"></Text>
+				<Text text="PostalCode: {PostalCode}"></Text>
+				<Text text="Country: {Country}"></Text>
+				<Text text="Phone: {Phone}"></Text>
+				<Text text="Fax: {Fax}"></Text>
+			</layout:VerticalLayout>
+		</content>
+	</Page>
+</mvc:View>

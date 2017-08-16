@@ -1,0 +1,50 @@
+<mvc:View 
+	controllerName="sapui5.demo.routing.controller.start" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m">
+	<Page 
+		id="page" 
+		navButtonPress="onNavPress" 
+		showNavButton="true" 
+		title="{i18n>StartViewTitle}">
+		<content>
+			<Table
+				id="customerTable"
+				width="auto"
+				class="sapUiResponsiveMargin"
+				items="{/Customers}"
+				noDataText="{i18n>tableCustomerNoDataText}"
+				growing="true"
+				growingScrollToLoad="true">
+				<headerToolbar>
+					<Toolbar>
+						<Title id="tableHeader" text="{i18n>tableCustomerToolbarTitle}"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column id="CompanyNameColumn">
+						<header>
+							<Text text="{i18n>tableCustomerCompanyNameColumn}" id="CompanyNameColumnTitle"/>
+						</header>
+					</Column>
+					<Column id="CityColumn">
+						<header>
+							<Text text="{i18n>tableCustomerCityColumn}" id="CityColumnTitle"/>
+						</header>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem
+						type="Navigation"
+						press="onCustomerSelect">
+						<cells>
+							<ObjectIdentifier title="{CustomerID}"
+							                  text ="{CompanyName}"/>
+							<Text text="{City}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>
